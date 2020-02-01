@@ -1,0 +1,12 @@
+Call method validation, (<__main__.Handler object at 0xb710f76c>,), {'xml_path': 'file.xml'}
+
+validation method is return, True
+
+Call method transform, (<__main__.Handler object at 0xb710f76c>,), {'xlm_path': 'file.xml', 'result_file': 'resulting.xml'}
+
+transform method is return, Success
+
+Call method validation, (<__main__.Handler object at 0xb710f76c>,), {'xml_path': 'resulting.xml'}
+
+validation method is return, True
+

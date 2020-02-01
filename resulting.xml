@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<PLANETS>
+  <PLANET>
+    <NAME>Mercury</NAME>
+    <MASS>0.0553</MASS>
+  </PLANET>
+  <PLANET>
+    <NAME>Venus</NAME>
+    <MASS>0.815</MASS>
+  </PLANET>
+</PLANETS>
