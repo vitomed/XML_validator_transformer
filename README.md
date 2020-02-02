@@ -12,7 +12,7 @@ Preparation:
 
 * pip install requirements.txt
 
-* python3.7 main.py
+* python3 main.py
 
 * Open the ```log.txt``` to see the result of the script main.py
 
