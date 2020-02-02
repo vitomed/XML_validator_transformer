@@ -27,8 +27,6 @@
 			<xsl:value-of select="@UNITS"/>
 		</xsl:copy>
 	</xsl:template>
-	<xsl:template match="DAY"> </xsl:template>
+	<xsl:template match="DATE"> </xsl:template>
 	<xsl:template match="RADIUS"> </xsl:template>
-	<xsl:template match="DENSITY"> </xsl:template>
-	<xsl:template match="DISTANCE"> </xsl:template>
 </xsl:stylesheet>

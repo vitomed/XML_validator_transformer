@@ -4,6 +4,7 @@ from functools import wraps
 from lxml.etree import XMLSyntaxError, XSLT, parse
 from xml.etree.ElementTree import ParseError
 from xmlschema.exceptions import XMLSchemaKeyError
+from xmlschema.validators.exceptions import XMLSchemaParseError
 
 LOG = "log.txt"
 XML = "file.xml"
@@ -39,11 +40,11 @@ class Validator:
             schema = xmlschema.XMLSchema(self.xsd_path)
             resp = schema.is_valid(xml_path)
         except ParseError as parser_exc:
-            return f"File {os.path.basename(self.xsd_path)} " \
-                   f"schema is incorrectly composed: {parser_exc}"
+            return f"File {os.path.basename(self.xsd_path)} schema is incorrectly composed: {parser_exc}"
+        except XMLSchemaParseError as parser_err:
+            return f"{os.path.basename(self.xsd_path)}, invalid schema syntax: {parser_err}"
         except XMLSchemaKeyError as key_exc:
-            return f"{os.path.basename(xml_path)}" \
-                   f" does not match file schema: {key_exc}"
+            return f"{os.path.basename(xml_path)} does not match file schema: {key_exc}"
         return resp
 
 

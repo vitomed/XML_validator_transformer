@@ -8,10 +8,8 @@
                   <xs:sequence>
                      <xs:element name="NAME" type="xs:string" minOccurs="1"/>
                      <xs:element name="MASS" type="xs:decimal" minOccurs="1"/>
-                     <xs:element name="DAY" type="xs:decimal" minOccurs="0"/>
                      <xs:element name="RADIUS" type="xs:integer" minOccurs="0"/>
-                     <xs:element name="DENSITY" type="xs:decimal" minOccurs="0"/>
-                     <xs:element name="DISTANCE" type="xs:decimal" minOccurs="0"/>
+                     <xs:element name="DATE" type="xs:date" minOccurs="0"/>
                   </xs:sequence>
                </xs:complexType>
             </xs:element>
