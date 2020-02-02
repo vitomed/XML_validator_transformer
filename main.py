@@ -2,8 +2,8 @@ import os
 import xmlschema
 from functools import wraps
 from lxml.etree import XMLSyntaxError, XSLT, parse
-from xmlschema.exceptions import XMLSchemaKeyError
 from xml.etree.ElementTree import ParseError
+from xmlschema.exceptions import XMLSchemaKeyError
 
 LOG = "log.txt"
 XML = "file.xml"
@@ -58,8 +58,8 @@ class Transformer:
         dom = parse(xlm_path)
         try:
             xsl_parse = parse(self.xsl_path)
-        except XMLSyntaxError as exc:
-            return f"Error in file syntax {os.path.basename(file)}: {exc}"
+        except XMLSyntaxError as syntax_exc:
+            return f"Error in file syntax {os.path.basename(file)}: {syntax_exc}"
         transform = XSLT(xsl_parse)
         result = transform(dom)
 
